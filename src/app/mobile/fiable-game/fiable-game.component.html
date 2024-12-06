@@ -1,0 +1,73 @@
+<div *ngIf="!maintain" class="header">
+    <img src="../../../assets/images/sq.webp" alt="Random first
+        slide">
+</div>
+<div *ngIf="!maintain" style="position: relative; height: 100vh;">
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="content">
+        <!-- background animation -->
+        <section class="middle-wrapper">
+         
+            <div class="mini-games-content-wrapper">
+                <div *ngFor="let mgames of fbGames" (click)="openModal(mgames.url)" data-tilt="" data-tilt-glare="true"
+                    data-tilt-maxglare=".5" data-tilt-speed="700" class="hilo-container
+            game-container">
+                    <div data-tilt="" class="hilo-components inner-components">
+                    </div>
+                    <div class="game-bg-wrapper"><img src={{mgames.image_name}}></div>
+                </div>
+
+            </div>
+        </section>
+ 
+    </div>
+
+</div>
+
+<app-element-maintain *ngIf="maintain" [page]="title"></app-element-maintain>

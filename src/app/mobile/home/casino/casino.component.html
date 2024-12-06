@@ -1,0 +1,25 @@
+<div id="container">
+    <div id="left">
+        <p style=" color: white;font-size: 15px;font-weight: 200;">Casino games</p>
+    </div>
+    <div id="right" [routerLink]="['/casino']">
+        <p style=" color: white;font-size: 15px;font-weight: 200; padding-top:22% ">999 +</p>
+    </div>
+</div>
+<div style=" background-color: #0c0c27; ">
+    <div style=" display:flex; width: 100%">
+        <div style=" float: left;">
+
+        </div>
+        <div style=" float: right;">
+
+        </div>
+    </div>
+    <div class="home-games-cards">
+        <div class="card" *ngFor="let game of listGames">
+            <img (click)="openModal(game, game.name,game.image )" src="{{game.image}}" alt=""
+                class="imgc" style="width:100%; border-radius: 10px">
+        </div>
+    </div>
+   
+</div>

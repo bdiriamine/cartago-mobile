@@ -1,0 +1,22 @@
+<div class="bg game-modal">
+
+    <div class="modal-header">
+        <h4 class="modal-title">Inplay</h4>
+        <div class="controls d-flex align-items-center justify-content-between">
+            <span class="fullscreen-icon">
+                <img *ngIf="!fullscreen"   (click)="openGameFullScreen()" src="https://img.icons8.com/material-outlined/18/efb100/full-screen--v1.png" />
+                <img *ngIf="fullscreen" (click)="closeModal()" src="https://img.icons8.com/ios-glyphs/18/efb100/normal-screen.png" />
+            </span>
+            <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-body" [ngClass]="fullscreen ? 'fullscreen' :
+        'exist-fullscreen'">
+        <iframe id="iframe" [src]="link | safe" scrolling="no" [ngClass]="fullscreen ?
+            'fullscreen-iframe ' : 'iframe-style'" allowfullscreen>
+        </iframe>
+    </div>
+</div>

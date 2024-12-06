@@ -1,0 +1,5 @@
+<iframe *ngIf="!maintain"  [src]='iSport'
+    style=" min-height: calc(100vh - 55px); height: 100%; width: 100%; border: none;
+    padding-top: 3.4rem;"></iframe>
+
+<app-element-maintain *ngIf="maintain" [page]="title"></app-element-maintain>

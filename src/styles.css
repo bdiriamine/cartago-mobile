@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* font face */
+
+@font-face {
+    font-family: Prototype;
+    src: url('./assets/fonts/Prototype.ttf') format("opentype");
+}
+
+
+/* Color vars */
+
+html {
+    --primary: #121C29;
+    --primary-light: #17313A;
+    --separator: #213C47;
+    --secondary: #F7A600;
+    --secondary-light: #FFCC00;
+    --light: #ededed;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px !important;
+    /* font-family: 'Mukta', sans-serif !important; */
+    font-family: "Prototype" !important;
+}
+
+.egamings_container>iframe {
+    height: calc(100vh - 50px)!important;
+}
+
+#egamings_container>iframe {
+  height: calc(100vh - 50px)!important;
+}

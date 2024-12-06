@@ -1,0 +1,28 @@
+<div id="container">
+    <div id="left">
+        <p style=" color: white;font-size: 15px;font-weight: 200;">Mini games</p>
+    </div>
+    <div id="right" [routerLink]="['/mini-games']">
+        <p style=" color: white;font-size: 15px;font-weight: 200; padding-top:22% ">More +</p>
+    </div>
+</div>
+
+<div style=" background-color: #0c0c27; ">
+    <div style=" display:flex; width: 100%">
+        <div style=" float: left;">
+        </div>
+        <div style=" float: right;">
+        </div>
+    </div>
+    <div style="display:flex;">
+        <div class="card">
+            <img (click)="dinoo()" src="https://m.carthagobet.tn/assets/images/mini-games/dinosaur.png" alt="" class="imgc" style="width:100%; border-radius: 10px">
+        </div>
+        <div class="card">
+            <img (click)="openNewGame('JetX', 'JetXMobile')" src="https://m.carthagobet.tn/assets/images/new-games/JetX.png" alt="" class="imgc" style="width:100%; border-radius: 10px">
+        </div>
+        <div class="card">
+            <img (click)="dinoo()" src="../../../assets/images/home-cards/coinflip-min.png" alt="" class="imgc" style="width:100%; border-radius: 10px">
+        </div>
+    </div>
+</div>

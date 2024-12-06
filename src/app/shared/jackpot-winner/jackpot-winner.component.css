@@ -1,0 +1,31 @@
+.jw .modal-body {
+    height: 84vh;
+    display: flex;
+    align-items: center;
+}
+
+::ng-deep .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: transparent;
+    border: 0;
+}
+
+.jackpotwinner img {
+    width: 100%;
+    height: 100%;
+}
+
+button.close-jw {
+    background: #eeb331;
+    border: 0;
+    border-radius: 10px;
+}
+
+.message {
+    color: #fefefe;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,55 @@
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    background: #0c0c27;
+    color: var(--light);
+    border-top: 1px solid #213c47;
+    font-size: 8px;
+}
+
+.advices {
+    font-family: Verdana, sans-serif;
+}
+
+.about,
+.social-media {
+    width: 50%;
+}
+
+.social-media .items {
+    display: flex;
+}
+
+.social-media .items span {
+    margin-right: 15px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about ul a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.licence a {
+    position: relative;
+}
+
+img.centriVer {
+    position: absolute;
+    left: 39%;
+    top: 100%;
+}
+
+.gambling {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 0.8rem;
+}

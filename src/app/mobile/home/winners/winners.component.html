@@ -1,0 +1,66 @@
+<div class="winners">
+    <div class="winners__item" *ngFor="let winner of winnersList">
+        <div class="img"><img src="{{winner.game.game_image}}" (click)="openGame(winner.game)"></div>
+        <div class="text">
+            <span class="game-title">
+                {{winner.game.game_name}}
+            </span>
+            <span class="winner-name">
+                {{winner.username}}
+            </span>
+            <span class="price"> {{winner.amount}} TND</span>
+            <span class="date"> {{winner.created_at | date: 'dd/MM/yyyy'}}</span>
+        </div>
+    </div>
+    <!-- 
+    <div class="winners__item">
+        <div class="img"><img src="../../../assets/images/winners/winner.jpeg"></div>
+        <div class="text">
+            <span class="game-title">
+                Game title
+            </span>
+            <span class="winner-name">
+                Winner name
+            </span>
+            <span class="price">1215$</span>
+        </div>
+    </div>
+
+    <div class="winners__item">
+        <div class="img"><img src="../../../assets/images/winners/winner.jpeg"></div>
+        <div class="text">
+            <span class="game-title">
+                Game title
+            </span>
+            <span class="winner-name">
+                Winner name
+            </span>
+            <span class="price">1215$</span>
+        </div>
+    </div>
+
+    <div class="winners__item">
+        <div class="img"><img src="../../../assets/images/winners/winner.jpeg"></div>
+        <div class="text">
+            <span class="game-title">
+                Game title
+            </span>
+            <span class="winner-name">
+                Winner name
+            </span>
+            <span class="price">1215$</span>
+        </div>
+    </div>
+    <div class="winners__item">
+        <div class="img"><img src="../../../assets/images/winners/winner.jpeg"></div>
+        <div class="text">
+            <span class="game-title">
+                Game title
+            </span>
+            <span class="winner-name">
+                Winner name
+            </span>
+            <span class="price">1215$</span>
+        </div>
+    </div> -->
+</div>

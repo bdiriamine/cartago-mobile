@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+    ::ng-deep .carousel-item {
+        height: 350px;
+    }
+
+    ::ng-deep .carousel-item img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    ::ng-deep .carousel-item {
+        height: 100%;
+    }
+
+    ::ng-deep .carousel-item img {
+        height: 100%;
+    }
+}

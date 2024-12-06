@@ -1,0 +1,88 @@
+<div class="web no-gutters" *ngIf="transactions">
+    <div class="no-transactions" *ngIf="transactions == 0"><span translate>No
+            transactions yet, go to <span class="redirection"
+                [routerLink]="['/casino']"><b>Casino </b></span> <span translate>and play.</span></span>
+    </div>
+    <div *ngIf="transactions != undefined && transactions != null" class="content-main touch-left bg">
+        <div class="row header">
+            <h4 class="page-title" translate>
+                Bet history</h4>
+        </div>
+
+        <div class="transactions-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th translate> Ticket ID </th>
+                        <th translate> Created at </th>
+                        <th translate> Transaction Id</th>
+                        <th translate> Amount </th>
+                        <th translate>Win</th>
+                        <th translate>Status</th>
+                        <th translate>Before/ After Bet</th>
+                        <th translate>Before/ After Update</th>
+
+                    </tr>
+                </thead>
+                <tbody *ngFor="let tk of transactions;index as i;">
+                    <tr>
+                        <td>{{tk.ticket_id}}</td>
+                        <td>{{tk.created_at }}</td>
+                        <td>{{tk.ticket_id }}</td>
+                        <td>{{tk.amount}}</td>
+                        <td>{{tk.win}}</td>
+                        <td *ngIf="tk.ticket_info.TicketResult!='none'">{{tk.ticket_info.TicketResult}}</td>
+                        <td *ngIf="tk.ticket_info.TicketResult=='none'">pending</td>
+                        <td>
+                            <span *ngIf="tk.status != null">{{tk.old_balance_before_bet}}
+                                /</span>
+                            <span *ngIf="tk.status != null">{{tk.new_balance_after_bet}}</span>
+                            <span *ngIf="tk.status == null">-</span>
+                        </td>
+                        <td>
+                            <span *ngIf="tk.status != null">
+                                {{tk.old_balance_before_win}} /</span> <span *ngIf="tk.status != null">{{tk.new_balance_after_win}}</span>
+                            <span *ngIf="tk.status == null">-</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="transactions != undefined && transactions != null" style="position:
+    absolute;bottom: 11px;width: 100%;display: flex;align-items:
+    center;justify-content: center;flex-direction: column;">
+    <div class="row" style="width: 100%;text-align: center;">
+        <div class="col-md-12"> <span style="text-align: center;font-weight:
+                bold;"> Page :
+                {{page}}</span></div>
+    </div>
+    <div class="navv">
+        <nav aria-label="Page navigation example" style="color: black;">
+            <button style="background-color: transparent;border: none;">
+                <a class="page-link" (click)="backTo()" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </button>
+
+            <ul class="pagination">
+                <li class="page-item" *ngFor="let p of arraytotal; let i=
+                    index">
+                    <button style="background-color: transparent;border: none;">
+                        <a class="page-link" (click)="getdTicketsPlayerPage(i)">{{i}}</a>
+                    </button>
+                </li>
+            </ul>
+
+            <button style="background-color: transparent;border: none;">
+                <a class="page-link" (click)="nextTo()" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </button>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+.profile-page {
+    padding-top: 3.467898rem;
+}
+
+h1.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: #e2a502;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.profilepress-edit-profile-status {
+    text-align: center;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: medium none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 8px 5px;
+    margin: auto;
+}
+
+.memo-edprofile-success {
+    text-align: center;
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: medium none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 8px 5px;
+    margin: auto;
+}
+
+#sc-edprofile {
+    background: #f0f0f0;
+    margin: 1rem;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    margin: 1rem 1rem 9rem 1rem;
+    position: relative;
+}
+
+div#sc-edprofile .sc-container {
+    background: #ffffff;
+    padding: 6% 4%;
+}
+
+div#sc-edprofile input[type="email"],
+div#sc-edprofile input[type="text"],
+div#sc-edprofile input[type="number"],
+div#sc-edprofile input[type="password"],
+div#sc-edprofile select,
+div#sc-edprofile textarea {
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 4%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 95%;
+    color: #555;
+    border-radius: 53px;
+    outline: none;
+}
+
+div#sc-edprofile select {
+    width: 100%;
+}
+
+div#sc-edprofile textarea {
+    height: 100px;
+}
+
+div#sc-edprofile input[type="submit"] {
+    width: 50%;
+    background: #e8e8e9;
+    border: 0;
+    padding: 4%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    color: #172438;
+    cursor: pointer;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+    border-radius: 54px;
+    position: absolute;
+    right: 20px;
+    bottom: -32px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+div#sc-edprofile input[type="submit"]:hover {
+    background: #e2a502;
+}
+
+input[type="text"][disabled] {
+    background: var(--light) !important;
+}
+
+p.change-password {
+    text-align: right;
+    color: var(--secondary);
+    cursor: pointer;
+}

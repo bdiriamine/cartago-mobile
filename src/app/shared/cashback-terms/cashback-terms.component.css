@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+}
+
+thead tr {
+    background: var(--primary);
+    color: #fff;
+}
+
+tbody tr {
+    background: var(--secondary);
+}
+
+th {
+    text-align: center;
+}
+
+tbody tr {
+    text-align: center;
+}
+
+button.close {
+    background: var(--primary);
+    color: #fff;
+    border: 0 !important;
+    width: 27px;
+    border-radius: 3px;
+}
+
+::ng-deep .modal.show .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

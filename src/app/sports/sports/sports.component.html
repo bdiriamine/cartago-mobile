@@ -1,0 +1,25 @@
+<!-- <iframe style="   
+   width : 100%;
+   height:100%;
+   padding-top: 3.4687497rem;
+   " scrolling="no" [src]="link | safe">
+   </iframe> -->
+
+   <!-- iframe sport js -->
+
+<div *ngIf="!maintain" id="container" class="sportsbook" style="padding-top: 3.4687497rem; z-index: 9999 !important;">
+    <div id="page" class="sportsbook">
+        <div id="sportbetContainer"></div>
+    </div>
+
+    <div class="contentBlock">
+        <div class="colFull">
+        </div>
+    </div>
+    <div class="contentBlock">
+        <div class="colFull">
+        </div>
+    </div>
+
+</div>
+<app-element-maintain *ngIf="maintain" [page]="title"></app-element-maintain>

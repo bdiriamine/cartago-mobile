@@ -1,0 +1,36 @@
+
+div.scrolling-limit {
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondary-light);
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+div.scrolling-arabic {
+    position: relative;
+    -webkit-animation: scroll-arabic 20s infinite linear;
+    -moz-animation: scroll-arabic 20s infinite linear;
+    -o-animation: scroll-arabic 20s infinite linear;
+    animation: scroll-arabic 20s infinite linear;
+}
+
+@keyframes scroll-arabic {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@-webkit-keyframes scroll-arabic{
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}

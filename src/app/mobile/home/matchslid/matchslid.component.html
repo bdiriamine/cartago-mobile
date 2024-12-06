@@ -1,0 +1,51 @@
+<div class=" tailleforwindow" style="z-index: 1;"  style="width: 100%; height: 200px;">
+    <div  style="width: 100%;">
+      <ngb-carousel >
+        <ng-template  ngbSlide *ngFor="let events of matchs; let index = index;"  >
+            <img src="../../../assets/football-soccer-background-with-big-ball-black-colors_444390-4422.webp" style=" opacity: 0.1;position: absolute;" alt="">
+            <div style="width: 100%; height: 200px; color:rgb(204, 204, 204);text-align: center;padding-top: 3%;">
+              
+               <div style="z-index: 999;">
+                <img src="../../../assets/icons/sc.png" alt="sc" style="width: 25px;padding-right: 2%;">{{matchs[index].CN}}
+               </div>
+               
+               <div  style="width: 100%;display: flex;color:rgb(204, 204, 204);padding-top: 15%;text-align: center;font-size:15px">
+                <div style="float : left;padding-left:2% ;width: 35%;">
+                    <img src="../../../assets/icons/home.png" alt="home" style="width: 25px"> <br>  {{matchs[index].AT }} 
+                </div>
+                <div style="float : left;padding-left:2%;width: 30%;">
+                    {{matchs[index].D }}
+                </div>
+                <div style="float : right;padding-left:2%;width: 35%;">
+                    <img src="../../../assets/icons/away.png" alt="home" style="width: 25px">   <br> {{matchs[index].HT}}
+                </div>
+            </div>
+            <!-- <div  style="width: 100%;display: flex;color:rgb(204, 204, 204);padding-top:1%;text-align: center;font-size:15px;background:rgb(48, 56, 63)">
+                <div style="float : left;padding-left:2% ;width: 35%;background-color:rgb(33 33 33);color: white;margin:0px 5px 0px 5px;">
+                    1 
+                </div>
+                <div style="float : left;padding-left:2%;width: 30%;background-color:rgb(33 33 33);color: white;margin:0px 5px 0px 5px;">
+                 X
+                </div>
+                <div style="float : right;padding-left:2%;width: 35%;background-color:rgb(33 33 33);color: white;margin:0px 5px 0px 5px;">
+                    2
+                </div>
+            </div>
+            <div  style="width: 100%;display: flex;color:rgb(204, 204, 204);text-align: center;font-size:15px;background-color:rgb(48, 56, 63)">
+                <div style="float : left;padding-left:2% ;width: 35%;background-color:rgb(33 33 33);color: white;margin:0px 5px 0px 5px;">
+                    1 
+                </div>
+                <div style="float : left;padding-left:2%;width: 30%;background-color:rgb(33 33 33);color: white;margin:0px 5px 0px 5px;">
+                 X
+                </div>
+                <div style="float : right;padding-left:2%;width: 35%;background-color:rgb(33 33 33);color: white;margin:0px 5px 0px 5px;">
+                    2
+                </div>
+            </div> -->
+            </div>
+
+    
+        </ng-template>
+      </ngb-carousel>
+    </div>
+</div>

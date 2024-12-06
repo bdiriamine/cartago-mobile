@@ -1,0 +1,311 @@
+<div class="register-page">
+    <h1 translate>Register</h1>
+
+    <div class="register-box">
+
+        <div #stepperEl id="stepper1" class="bs-stepper">
+            <div class="bs-stepper-header">
+                <div class="step" data-target="#partone">
+                    <button class="step-trigger">
+                        <span class="bs-stepper-circle">1</span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#parttwo">
+                    <button class="step-trigger">
+                        <span class="bs-stepper-circle">2</span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#partthree">
+                    <button class="step-trigger">
+                        <span class="bs-stepper-circle">3</span>
+                    </button>
+                </div>
+            </div>
+            <div class="bs-stepper-content">
+                <div id="partone" class="content" role="tabpanel">
+                    <div>
+                        <div>
+                            <form [formGroup]="registerForm" novalidate class="d-flex justify-content-center
+                                align-items-center flex-column">
+                                <div class="d-flex justify-content-center
+                                    align-items-center flex-column">
+                                    <div class="d-sm-flex d-block">
+                                        <div class="form-group mx-sm-2">
+                                            <label class="center-block" translate>Firstname
+                                                <input class="form-control"
+                                                    formControlName="firstname">
+                                            </label>
+                                            <div *ngIf="registerForm.controls['firstname'].invalid
+                                                &&
+                                                (registerForm.controls['firstname'].dirty
+                                                ||
+                                                registerForm.controls['firstname'].touched)" class="alert-danger">
+                                                <div translate *ngIf="registerForm.controls.firstname.errors?.required">
+                                                    Firstname is required
+                                                </div>
+                                                <div translate *ngIf="registerForm.controls.firstname.errors?.firstname">
+                                                    Firstname is not correct
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mx-sm-2">
+                                            <label class="center-block" translate>Lastname
+                                                <input class="form-control"
+                                                    formControlName="lastname">
+                                            </label>
+                                            <div *ngIf="registerForm.controls['lastname'].invalid
+                                                &&
+                                                (registerForm.controls['lastname'].dirty
+                                                ||
+                                                registerForm.controls['lastname'].touched)" class="alert-danger">
+                                                <div translate *ngIf="registerForm.controls.lastname.errors?.required">
+                                                    lastname is required
+                                                </div>
+                                                <div translate *ngIf="registerForm.controls.lastname.errors?.lastname">
+                                                    lastname is not correct
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-sm-flex d-block">
+                                        <div class="form-group mx-sm-2" style="display: flex; align-items: center; justify-content: center; margin-left: -5px; flex-direction: column;">
+                                            <label class="center-block" translate>Username
+                                                <input class="form-control"
+                                                    formControlName="username">
+                                            </label>
+                                            <div *ngIf="registerForm.controls['username'].invalid
+                                                &&
+                                                (registerForm.controls['username'].dirty
+                                                ||
+                                                registerForm.controls['username'].touched)" class="alert-danger d-flex
+                                                justify-content-center
+                                                flex-column" style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+                                                <div translate *ngIf="registerForm.controls.username.errors?.required">
+                                                    Username is required
+                                                </div>
+                                                <div translate *ngIf="registerForm.controls.username.errors?.username">
+                                                    Username is not correct
+                                                </div>
+                                                <div class="" *ngIf="registerForm.controls.username.errors" translate>Username must not contain spaces and special characters
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mx-sm-" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                                            <label class="center-block" translate>Email
+                                                <input class="form-control"
+                                                    formControlName="email">
+                                            </label>
+                                            <div *ngIf="registerForm.controls['email'].invalid
+                                                &&
+                                                (registerForm.controls['email'].dirty
+                                                ||
+                                                registerForm.controls['email'].touched)" class="alert-danger">
+                                                <div translate *ngIf="registerForm.controls.email.errors?.required">
+                                                    Email is required
+                                                </div>
+                                                <div translate *ngIf="registerForm.controls.email.errors?.email">
+                                                    Email is not correct
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-sm-flex d-block">
+                                        <div class="form-group mx-sm-2">
+                                            <label class="center-block
+                                                position-relative" translate>Password
+                                                <input class="form-control"
+                                                    formControlName="password"
+                                                    [type]="showPassword ?
+                                                    'text' :
+                                                    'password'">
+                                                <span class="eye"
+                                                    *ngIf="!showPassword"
+                                                    (click)="onShowPassword()"><i
+                                                        class="fa fa-eye-slash"></i></span>
+                                                <span class="eye"
+                                                    *ngIf="showPassword"
+                                                    (click)="onShowPassword()"><i
+                                                        class="fa fa-eye"></i></span>
+                                            </label>
+
+                                            <div *ngIf="registerForm.controls['password'].invalid
+                                                &&
+                                                (registerForm.controls['password'].dirty
+                                                ||
+                                                registerForm.controls['password'].touched)" class="alert-danger">
+                                                <div *ngIf="registerForm.controls.password.errors?.required" translate>
+                                                    Password is required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mx-sm-2">
+                                            <label class="center-block
+                                                position-relative" translate>Confirm
+                                                password
+                                                <input class="form-control"
+                                                    formControlName="confirmPass"
+                                                    [type]="showPassword ?
+                                                    'text' :
+                                                    'password'">
+                                                <span class="eye"
+                                                    *ngIf="!showPassword"
+                                                    (click)="onShowPassword()"><i
+                                                        class="fa fa-eye-slash"></i></span>
+                                                <span class="eye"
+                                                    *ngIf="showPassword"
+                                                    (click)="onShowPassword()"><i
+                                                        class="fa fa-eye"></i></span>
+                                            </label>
+
+                                            <div *ngIf="registerForm.controls['password'].invalid
+                                                &&
+                                                (registerForm.controls['password'].dirty
+                                                ||
+                                                registerForm.controls['password'].touched)" class="alert-danger">
+                                                <div translate *ngIf="registerForm.controls.password.errors?.required">
+                                                    Password is required
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="next">
+                            <span *ngIf="!registerForm.controls.username.errors && !registerForm.controls.firstname.errors && !registerForm.controls.lastname.errors && !registerForm.controls.email.errors && !registerForm.controls.confirmPass.errors" style="color: #f7a600; cursor: pointer;"
+                                (click)="next()" translate> Next ></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="parttwo" class="content" role="tabpanel">
+                    <div>
+                        <form [formGroup]="registerForm" novalidate class="d-flex
+                            justify-content-center align-items-center
+                            flex-column">
+                            <div class="d-flex justify-content-center
+                                align-items-center flex-column">
+                                <div class="d-sm-flex d-block">
+                                    <div class="form-group mx-sm-2">
+                                        <label class="center-block" translate>Phone
+                                            <input type="number" class="form-control"
+                                                formControlName="phone" min="8">
+                                        </label>
+                                        <div *ngIf="registerForm.controls['phone'].invalid
+                                            &&
+                                            (registerForm.controls['phone'].dirty
+                                            ||
+                                            registerForm.controls['phone'].touched)" class="alert-danger">
+                                            <div translate *ngIf="registerForm.controls.phone.errors?.required">
+                                                Phone is required
+                                            </div>
+                                            <div translate *ngIf="registerForm.controls.phone.errors?.phone">
+                                                Phone is not correct
+                                            </div>
+                                            <div translate *ngIf="registerForm.controls.phone.errors?.min">
+                                                Phone is lower then 8 digits
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mx-sm-2">
+                                        <label class="center-block" translate>Country
+                                            <input class="form-control"
+                                                formControlName="country">
+                                        </label>
+                                        <div *ngIf="registerForm.controls['country'].invalid
+                                            &&
+                                            (registerForm.controls['country'].dirty
+                                            ||
+                                            registerForm.controls['country'].touched)" class="alert-danger">
+                                            <div translate *ngIf="registerForm.controls.country.errors?.required">
+                                                Country is required
+                                            </div>
+                                            <div translate *ngIf="registerForm.controls.country.errors?.country">
+                                                Country is not correct
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex justify-content-center
+                                align-items-center flex-column">
+                                <div class="d-sm-flex d-block">
+                                    <div class="form-group mx-sm-2">
+                                        <label class="center-block">CIN
+                                            <input type="number"
+                                                class="form-control"
+                                                formControlName="cin" min="0">
+                                        </label>
+                                        <div *ngIf="registerForm.controls['cin'].invalid
+                                            &&
+                                            (registerForm.controls['cin'].dirty
+                                            ||
+                                            registerForm.controls['cin'].touched)" class="alert-danger">
+                                            <div translate *ngIf="registerForm.controls.cin.errors?.required">
+                                                Cin is required
+                                            </div>
+                                            <div translate *ngIf="registerForm.controls.cin.errors?.max">
+                                                Cin is longer then 8 digits
+                                            </div>
+                                            <div translate *ngIf="registerForm.controls.cin.errors?.min">
+                                                Cin is lower then 8 digits
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mx-sm-2">
+                                        <label class="center-block">Adreese
+                                            <input class="form-control"
+                                                formControlName="adresse">
+                                        </label>
+                                        <div *ngIf="registerForm.controls['adresse'].invalid
+                                            &&
+                                            (registerForm.controls['adresse'].dirty
+                                            ||
+                                            registerForm.controls['adresse'].touched)" class="alert-danger">
+                                            <div translate *ngIf="registerForm.controls.adresse.errors?.required">
+                                                adresse is required
+                                            </div>
+                                            <div translate *ngIf="registerForm.controls.adresse.errors?.adresse">
+                                                adresse is not correct
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group mx-sm-2 pt-3">
+                                <input type="checkbox" name="terms" id="terms" formControlName="terms" [(ngModel)]="registerVars.terms"> I Agree to
+                                <span class="terms" routerLink="/terms&conditions">Terms &
+                                    Coditions</span>
+                            </div>
+
+                        </form>
+                        <div class="next" *ngIf="!registerForm.controls.adresse.errors && !registerForm.controls.cin.errors && !registerForm.controls.country.errors && !registerForm.controls.phone.errors">
+                            <span style="color: #f7a600; cursor: pointer;" (click)="next()" translate> Next ></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="partthree" class="content" role="tabpanel">
+
+                    <a class="register d-flex justify-content-center" (click)="register()" translate>
+                        <!-- <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>  -->
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

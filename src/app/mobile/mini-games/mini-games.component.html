@@ -1,0 +1,132 @@
+<div *ngIf="!maintain" class="header">
+    <img src="../../../assets/images/mini2.webp" alt="Random first
+        slide">
+</div>
+<div *ngIf="!maintain" style="position: relative; height: 100vh;">
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="content">
+        <!-- background animation -->
+
+
+        <!-- background animation -->
+        <section class="middle-wrapper mini-games">
+
+            <div class="mini-games-content-wrapper">
+                <div (click)="hiloo()" data-tilt="" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-speed="700"
+                    class="hilo-container
+            game-container">
+                    <div data-tilt="" class="hilo-components inner-components">
+                        <h1 class="hilo-title title">HILO</h1><img class="hilo-cards"
+                            src="https://m.carthagobet.tn/assets/images/mini-games/hilo-cards-withArrows.png" alt="">
+                    </div>
+                    <div class="game-bg-wrapper"><img
+                            src="https://m.carthagobet.tn/assets/images/mini-games/hilo-background.png"></div>
+                </div>
+
+
+                <div (click)="dinoo()" data-tilt="" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-speed="700"
+                    class="dino-container
+            game-container">
+                    <div data-tilt="" class="dino-components inner-components">
+                        <h1 class="dino-title title">DINO</h1>
+                        <img class="dinosaur" src="https://m.carthagobet.tn/assets/images/mini-games/dinosaur.png"
+                            alt="">
+                        <img class="cactus" src="https://m.carthagobet.tn/assets/images/mini-games/cactus.png" alt="">
+                    </div>
+                    <div class="game-bg-wrapper"><img
+                            src="https://m.carthagobet.tn/assets/images/mini-games/dino-bg.png"></div>
+                    <div class="play-overlay"><button class="play-btn">PLAY</button></div>
+                </div>
+
+
+                <div (click)="dicee()" data-tilt="" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-speed="700"
+                    class="hilo-container
+            game-container">
+                    <div data-tilt="" class="hilo-components inner-components">
+                        <h1 class="hilo-title title">Dice</h1><img class="hilo-cards"
+                            src="https://demo.inplaynet.com/assets/images/minigames/dice/dice-cube.png" alt="">
+                    </div>
+                    <div class="game-bg-wrapper"><img
+                            src="https://demo.inplaynet.com/assets/images/minigames/dice/dice-bg.png"></div>
+                </div>
+
+
+
+                <div (click)="chickenn()" data-tilt="" data-tilt-glare="true" data-tilt-maxglare=".5"
+                    data-tilt-speed="700" class="hilo-container
+            game-container">
+                    <div data-tilt="" class="hilo-components inner-components">
+                        <h1 class="hilo-title title">Chicken</h1><img class="hilo-cards"
+                            src="https://demo.inplaynet.com/assets/images/minigames/chicken/chicken-dinner.png" alt="">
+                    </div>
+                    <div class="game-bg-wrapper"><img
+                            src="https://demo.inplaynet.com/assets/images/minigames/chicken/chicken-bg.png"></div>
+                </div>
+                <div (click)="kenoo()" data-tilt="" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-speed="700"
+                    class="hilo-container
+            game-container">
+                    <div data-tilt="" class="hilo-components inner-components">
+                        <h1 class="hilo-title title">Keno</h1><img class="hilo-cards"
+                            src="https://demo.inplaynet.com/assets/images/minigames/keno/keno-ball3.png" alt="">
+                    </div>
+                    <div class="game-bg-wrapper"><img
+                            src="https://demo.inplaynet.com/assets/images/minigames/keno/keno-bg.png"></div>
+                </div>
+                <!-- <div data-tilt="" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-speed="700" class="hilo-container game-container">
+            <div data-tilt="" class="hilo-components inner-components">
+                <h1 class="hilo-title title">HILO</h1><img class="hilo-cards" src="../../../assets/images/mini-games/hilo-cards-withArrows.png" alt=""></div>
+            <div class="game-bg-wrapper"><img src="../../../assets/images/mini-games/hilo-background.png"></div>
+        </div> -->
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<app-element-maintain *ngIf="maintain" [page]="title"></app-element-maintain>

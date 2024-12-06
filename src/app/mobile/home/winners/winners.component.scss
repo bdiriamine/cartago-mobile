@@ -1,0 +1,87 @@
+.winners {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+   
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 12px 9px;
+        width: 125px;
+        flex-direction: column;
+        border: 1px solid #adadad;
+        margin: 3px;
+        border-radius: 10px;
+        -webkit-box-shadow: 1px 2px 3px -2px #adadad;
+        box-shadow: 1px 2px 3px -2px #adadad;
+
+        .img {
+            height: 50px;
+            border-radius: 5px;
+
+            img {
+                height: 100%;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .text {
+            display: flex;
+            color: white;
+            flex-direction: column;
+            align-items: center;
+
+            .game-title{
+               font-size: 11px !important;
+            }
+
+            .winner-name {
+                font-size: 10px;
+            }
+
+            .price {
+                font-size: 12px;
+                color: #ffce40;
+            }
+
+            .game-title {
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            span.date {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.winners::-webkit-scrollbar {
+  height: 3px;
+  padding: 0 10px;
+  width: 20px;
+  scrollbar-width: 20px;
+}
+
+/* Track */
+.winners::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 6px;
+  height: 3px;
+  margin: 0 10px;
+  width: 20px;
+  scrollbar-width: 20px;
+}
+
+/* Handle */
+.winners::-webkit-scrollbar-thumb {
+  background: #ededed;
+  border-radius: 10px;
+  height: 3px;
+  margin: 0 10px;
+  width: 20px;
+  scrollbar-width: 20px;
+}

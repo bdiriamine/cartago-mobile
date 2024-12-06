@@ -1,0 +1,34 @@
+.terms p {
+    text-align: justify;
+}
+
+.terms {
+    margin-bottom: 4rem;
+}
+
+.modal-body {
+    height: 80vh;
+    overflow: scroll;
+}
+
+.accept {
+    background: var(--secondary);
+    color: var(--primary);
+    border: 0;
+    outline: none;
+}
+
+.decline {
+    background: var(--primary);
+    color: var(--secondary);
+    outline: none;
+}
+
+button.close {
+    background: var(--primary);
+    border: 0;
+    width: 28px;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+}

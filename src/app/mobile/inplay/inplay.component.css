@@ -1,0 +1,132 @@
+button.close {
+    background: transparent;
+    border: 1px solid #ccc;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: none;
+}
+
+.bg {
+    background: #efb10052;
+    color: #172438;
+    /* height: 99vh; */
+    width: 100vw !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+.bg:before {
+    opacity: 0.3;
+    content: "";
+    width: 100%;
+    height: 93%;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    background: rgba(33, 60, 71, 0.7609418767507002);
+}
+
+.bg .modal-header:before {
+    background: linear-gradient(90deg, rgba(18, 28, 41, 1) 0%, rgba(33, 60, 71, 0.8169642857142857) 100%);
+    height: 45px !important;
+    font-size: 15px !important;
+    opacity: 0.5 !important;
+}
+
+.bg .modal-title {
+    color: #efb100 !important;
+}
+
+.bg button.close {
+    color: #efb100;
+}
+
+.bg .modal-header {
+    border-bottom: 0;
+    padding: 0.3rem 1rem !important;
+    background: linear-gradient(90deg, rgba(18, 28, 41, 1) 0%, rgba(33, 60, 71, 0.8169642857142857) 100%);
+}
+
+::ng-deep .modal-dialog.modal-xxl {
+    margin: 0 !important;
+}
+
+iframe {
+    height: 80vh !important;
+}
+
+::ng-deep .modal-dialog.modal-xxl .modal-content {
+    width: 100vw !important;
+}
+
+.modal-body.fullscreen iframe {
+    height: 100% !important;
+    position: fixed;
+}
+
+.modal-body {
+    padding: 0.2rem;
+}
+
+.modal-body.exist-fullscreen iframe {
+    position: relative;
+}
+
+.controls {
+    z-index: 99 !important;
+}
+
+iframe#iframe {
+    width: 100% !important;
+    z-index: 1;
+}
+
+button.close {
+    border: 0;
+}
+
+span.fullscreen-icon,
+button.close {
+    background: #213c47;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2rem;
+    font-size: 20px;
+}
+
+.fullscreen-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 2;
+    -ms-overflow-style: none;
+}
+
+.fullscreen-iframe::-webkit-scrollbar {
+    display: none;
+}
+
+.iframe-style {
+    border: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}

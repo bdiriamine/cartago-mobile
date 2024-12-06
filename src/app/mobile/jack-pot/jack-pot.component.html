@@ -1,0 +1,39 @@
+<div class="live-casino">
+    <app-pub></app-pub>
+    <app-jackpot-prizes></app-jackpot-prizes>
+    <div class="slider">
+        <div class="top-page  ">
+            <video autoplay loop muted class="wrapper__video">
+                <source src="https://m.carthagobet.tn/assets/images/covers/jackpot.mp4">
+            </video>
+        </div>
+    </div>
+    <div class="casino-navs">
+        <div class="search">
+            <input type="text" [(ngModel)]="searchName" placeholder="search">
+            <span class="icon" ><i class="fa fa-search"></i></span>
+        </div>
+
+    </div>
+
+    <div class="items">
+        <div Class="no-result" *ngIf="listGame.length == 0">
+
+            <span translate>There's no result for this filter, please try another
+                one</span>
+        </div>
+        <div class="games" *ngIf="listGame">
+            <div class="line snowContainer">
+
+                <div (click)="openModal(game, game.name, game.image,game.gapi)" class="item" *ngFor="let game of listGame | searchFilter: searchName: 'name' " style="border: 1px solid #efb239;
+                border-radius: 14px;">
+                    <img *ngIf="game.image" src={{game.image}} width="210" height="140" loading="lazy">
+                    <div class="text">
+                        <span>{{game.name}}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

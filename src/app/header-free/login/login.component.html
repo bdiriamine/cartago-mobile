@@ -1,0 +1,49 @@
+<div class="login" (keydown.enter)="login()">
+    <h1 translate>Login</h1>
+    <div class="login-box">
+        <form [formGroup]="loginForm" novalidate class="d-flex justify-content-center align-items-center flex-column">
+            <div class="d-flex justify-content-center align-items-center flex-column pt-5">
+                <div class="form-group">
+                    <label class="center-block" translate>Username 
+                        <input class="form-control" formControlName="username">
+                    </label>
+
+                    <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="alert-danger">
+                        <div translate *ngIf="loginForm.controls.username.errors?.required">
+                            Username is required
+                        </div>
+                        <div translate *ngIf="loginForm.controls.username.errors?.username">
+                            Username is not correct
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="center-block position-relative" translate>Password 
+                        <input class="form-control" formControlName="password"
+                            [type]=" showPassword ? 'text' : 'password' ">
+                        <span class="eye" *ngIf="!showPassword" (click)="onShowPassword()"><i
+                                class="fa fa-eye-slash"></i></span>
+                        <span class="eye" *ngIf="showPassword" (click)="onShowPassword()"><i
+                                class="fa fa-eye"></i></span>
+                    </label>
+
+                    <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert-danger">
+                        <div translate *ngIf="loginForm.controls.password.errors?.required">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="d-flex justify-content-center" (click)="login()" translate>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Login
+            </a>
+
+            <p class="pt-4" translate>Or create your account <strong [routerLink]="['/register']" class="register" translate>here</strong>.</p>
+        </form>
+    </div>
+</div>

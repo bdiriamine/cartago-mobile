@@ -1,0 +1,16 @@
+<div class="d-flex bg-pub" >
+    <div class="fixed-box">
+        <p class="logo-1 p-0 m-0">
+            <img src="https://m.carthagobet.tn/assets/images/jackpot.png" style="
+          height: 100%;
+          width: 100%;
+      ">
+        </p>
+    </div>
+    <div class="scrolling-limit">
+
+        <div class="scrolling">
+            <span *ngIf="this.winners.length > 0" translate>After a good gaming week the JACKPOT winner is:</span> <span class="winner" *ngFor="let winner of winners; let i=index;"><b> {{ winner}}</b> </span>
+        </div>
+    </div>
+</div>
